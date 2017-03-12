@@ -1,0 +1,4 @@
+*.zip
+*.pdf
+.buckd
+buck-out

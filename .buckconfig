@@ -1,0 +1,6 @@
+[project]
+  ignore = .git,target
+[java]
+  src-roots = src
+  source-level = 7
+  target_level = 7

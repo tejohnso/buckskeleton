@@ -1,0 +1,22 @@
+<FindBugsFilter>
+     <!-- Bug descriptions: http://findbugs.sourceforge.net/bugDescriptions.html  -->
+
+     <!-- Match all violations. -->
+     <!-- But ignore these:
+            * comparator should be serializable
+            * something else dealing with serialization
+            * format string should use %n instead of /n
+            * inner class should be static (awkard, but possible with generics)
+            * using entrySet() is more efficient than keySet(), but it is awkward
+            * class defines compareTo() and inherits equals()
+       -->
+     <Match classregex=".*" >
+       <BugPattern name="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE,
+                         SE_BAD_FIELD,
+                         VA_FORMAT_STRING_USES_NEWLINE,
+                         SIC_INNER_SHOULD_BE_STATIC,
+                         WMI_WRONG_MAP_ITERATOR,
+                         EQ_COMPARETO_USE_OBJECT_EQUALS" />
+     </Match>
+
+</FindBugsFilter>

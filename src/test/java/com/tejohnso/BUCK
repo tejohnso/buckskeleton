@@ -1,0 +1,10 @@
+java_test(
+  name = 'test',
+  srcs = glob(['**/*Test.java']),
+  visibility = [ 'PUBLIC' ],
+  deps = [
+    '//src/main/java/com/tejohnso:all',
+    '//third_party:junit',
+  ],
+  std_out_log_level = "FINE",
+)
